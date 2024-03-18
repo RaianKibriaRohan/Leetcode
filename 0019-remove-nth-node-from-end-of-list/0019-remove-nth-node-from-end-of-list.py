@@ -30,8 +30,7 @@ class Solution(object):
             return head.next
         
         target_idx = length - n - 1
-        prev = self.node_at(head, target_idx)
-        
+        prev = self.node_at(head, target_idx)        
         prev.next = prev.next.next
         
         return head
