@@ -14,7 +14,7 @@ class Solution(object):
     
     def node_at(self, head, index):
         temp = head
-        c = 0
+        c = 1
         while temp!=None:
             if c==index:
                 return temp
@@ -22,12 +22,11 @@ class Solution(object):
             c+=1
             
     def reverseList(self, head):
-        temp = head
         dummy = ListNode() 
         current = dummy
         length = self.count(head)
         while length>0:
-            getting = self.node_at(head,length-1)
+            getting = self.node_at(head,length)
             current.next = ListNode(getting.val)
             length-=1
             if length==0:
